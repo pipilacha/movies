@@ -1,5 +1,5 @@
 echo "Creating a Python virtual environment"
-if [ -d venv2 ]; then python3 -m venv ./venv; else echo "Virtual env already exists"; fi
+if [ -d venv ]; then python3 -m venv ./venv; else echo "Virtual env already exists"; fi
 
 echo ""
 echo "Installing Python depenencies..."
