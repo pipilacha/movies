@@ -1,0 +1,6 @@
+# Django REST Framework dependencies
+Django==4.2
+djangorestframework
+markdown
+django-filter
+psycopg[binary]

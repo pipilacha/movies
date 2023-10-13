@@ -1,0 +1,1 @@
+docker run --name moviesapp-db --rm -p 5432:5432 -v moviesapp:/var/lib/postgresql/data -e POSTGRES_USER=moviesapp -e POSTGRES_PASSWORD=1234 -d postgres:16-alpine
