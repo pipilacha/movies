@@ -31,4 +31,4 @@ jobs:
         
     - name: Run Tests
       run: |
-        python moviesapp/manage.py test
+        python moviesapp/manage.py test moviesapp/
