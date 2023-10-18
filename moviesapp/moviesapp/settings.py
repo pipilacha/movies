@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'genders.apps.GendersConfig',
+    'actors.apps.ActorsConfig',
     'movies.apps.MoviesConfig',
     'rest_framework',
     'django.contrib.admin',
@@ -80,7 +82,7 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    'default' : {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'HOST': 'localhost',
         'PORT': '5432',
