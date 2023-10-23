@@ -1,5 +1,5 @@
 
-from django.urls import path
+from django.urls import path, include
 
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -12,5 +12,6 @@ def health(request):
 
 
 urlpatterns = [
-    path("health/", health, name="health")
+    path("health/", health, name="health"),
+    path("", include('actors.urls'))
 ]

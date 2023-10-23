@@ -28,6 +28,6 @@ def health(request):
 
 urlpatterns = [
     path("health/", health, name="health"),
-    path('movies/', include('movies.urls')),
+    path('moviesapp/', include('movies.urls')),
     path('admin/', admin.site.urls),
 ]

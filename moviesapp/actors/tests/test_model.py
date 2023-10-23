@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.utils import timezone
 
 from movies.models import Movies
-from actors.models import Actors
+from actors.models import Actor
 
 
 class Test_Actors(TestCase):
@@ -12,7 +12,7 @@ class Test_Actors(TestCase):
     @classmethod
     def setUpTestData(cls) -> None:
         print("Setting up test data for Actors model Tests")        
-        actors = Actors.objects.bulk_create([Actors(name='Idris Elba'), Actors(name='Juan Mora'), Actors(name='Santa Claus')])
+        actors = Actor.objects.bulk_create([Actor(name='Idris Elba'), Actor(name='Juan Mora'), Actor(name='Santa Claus')])
         data = {
             'title': 'Avengers 3',
             'rating': '4.5',
@@ -32,7 +32,7 @@ class Test_Actors(TestCase):
         cls.movies_id.append(movie.id)
 
     def test_many_to_many_rel_movies(self):
-        actors = Actors.objects.get(name='Idris Elba')
+        actors = Actor.objects.get(name='Idris Elba')
         movies = Movies.objects.filter(actors=actors.id)
         self.assertEquals(len(movies), len(Test_Actors.movies_id))
         for movie in movies:
