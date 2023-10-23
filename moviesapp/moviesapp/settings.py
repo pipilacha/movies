@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'moviesapp.hostname_middleware.HostNameMiddleWare'
 ]
 
 ROOT_URLCONF = 'moviesapp.urls'
@@ -171,3 +172,6 @@ LOGGING = {
         }
     }
 }
+
+# https://docs.djangoproject.com/en/4.2/ref/settings/#append-slash
+APPEND_SLASH = True

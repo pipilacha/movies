@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.utils import timezone
 
 from movies.models import Movies
-from actors.models import Actors
+from actors.models import Actor
 from genders.models import Genders
 
 
@@ -13,7 +13,7 @@ class Test_Movies(TestCase):
     def setUpTestData(cls) -> None:
         print("setUpTestData: Run once to set up non-modified data for all class methods.")
         genders = Genders.objects.bulk_create([Genders(name='Horror'), Genders(name='Sci-Fi')])
-        actors = Actors.objects.bulk_create([Actors(name='Chris Pratt'), Actors(name='Brad Pitt'), Actors(name='Santa Claus')])
+        actors = Actor.objects.bulk_create([Actor(name='Chris Pratt'), Actor(name='Brad Pitt'), Actor(name='Santa Claus')])
         data = {
             'title': 'Avengers 3',
             'rating': '4.5',
